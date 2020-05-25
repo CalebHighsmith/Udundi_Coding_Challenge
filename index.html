@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Udundi Coding Challenge</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Fonts and Icons and AOS Library-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5b0f4d98d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    
+  </head>
+  <body>
+    <!--Sets the leftside of the webpage and includes the crimson border-->
+    <div class="row">
+        <div class="col">
+            <div class="leftside">
+              <!--The hidden document-->
+                <div id="popuptoggle" class="popupdocument">
+                  <section class="popup-explore">Explore</section>
+                  <section class="explore-underline"></section>
+                  <p class="body-text">Last night I had the strangest dream. I sailed away to China, in a little row boat to find ya. And you said you had to get your laundry cleaned. Didn't want no one to hold you. What does that mean? Ain't nothiin gonna break-a my stride. Nobody gonna slow me down, oh no. I got to keep on movin. Ain't nothin' gonna break-a my stride, I'm running and I won't touch ground, Oh no. I got to keep on movin'. You're on the road and now you pray it lasts. The road behind was rocky, but now you're feeling cocky. You look at me and you see your past. Is that the reason why you're runnin' so fast? And she said, Ain't nothin' gonna break-a my stride.</p>
+                  <div class="close">
+                  <button id="toggle-close" style="background: transparent;color: #611818; border: none; outline: none;">
+                  <i class="fas fa-times"></i>
+                  </button>
+                  </div>
+                  <div class="readmore-background"></div>
+                  <section class="readmore">READ&nbspMORE</section>
+                </div>
+                <!--Contains animation and functionality for "Explore" and "More Detais"-->
+                <div class="explore" data-aos="fade-right">Explore</div>
+                <button id="details-toggle" class="more-details" data-aos="fade-up">More&nbspDetails</button>
+                <div class="plus-sign">
+                <i class="fas fa-plus-circle" data-aos="fade-up"></i>    
+                </div>
+              </div>
+          </div>
+        </div>
+        <!--Contains code for the rightside of the webpage-->
+        <div class="col">
+            <div class="rightside">
+                <div class="facebook">
+                <i class="fab fa-facebook" data-aos="flip-left"></i>
+                </div>
+                <div class="instagram">
+                <i class="fab fa-instagram" data-aos="flip-left"></i>   
+                </div>
+          </div>   
+        </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Aos Script-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:2000
+    });
+  </script>
+  <!--Allows for the "More Details" and the "X" Symbol to toggle the hidden div-->
+  <script>$(document).ready(function(){
+    $("#details-toggle, #toggle-close").click(function(){
+    $("#popuptoggle").toggle(500); 
+  });
+  })  
+  </script>
+  </body>
+</html>
